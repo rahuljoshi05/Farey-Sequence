@@ -10,6 +10,7 @@ namespace TestFareySeq
         public string getFareySeqForNumber(int p)
         {
             string result = "";
+            double tempX = 0, tempY = 0;
             try
             {
                 result = "{";
@@ -17,17 +18,23 @@ namespace TestFareySeq
                 {
                     throw new FormatException("Number has to be greater or equal to 0");
                 }
-                int a = 0, b = 1, c = 1, d = p, k = 0;
-                result = result + a + "/" + b;
-                while (c <= p)
+                // We know first two terms are 0/1 and 1/n
+                double x1 = 0, y1 = 1, x2 = 1, y2 = p;
+                result = result + x1 + "/" + y1;
+                result = result+", " + x2 + "/" + y2;
+
+                while (tempY != 1.0)
                 {
-                    k = Convert.ToInt32((p + b) / d);
-                    //    a, b, c, d = c, d, (k*c-a), (k*d-b)
-                    a = c;
-                    b = d;
-                    c = (k * c - a);
-                    d = (k * d - b);
-                    result = result+", " + a + "/" + b;
+                    // Using recurrence relation to find the next term
+                    tempX = Math.Floor((y1 + p) / y2) * x2 - x1;
+                    tempY = Math.Floor((y1 + p) / y2) * y2 - y1;
+                    //Capture result
+                    result = result + ", " + tempX + "/" + tempY;
+                    // Update x1, y1, x2 and y2 for next iteration
+                    x1 = x2;
+                    x2 = tempX;
+                    y1 = y2;
+                    y2 = tempY;
                 }
                 result = result+ "}";
 

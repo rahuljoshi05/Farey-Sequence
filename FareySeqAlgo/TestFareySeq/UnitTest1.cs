@@ -14,7 +14,7 @@ namespace TestFareySeq
             //Format Exception for a negative number
             sequence.getFareySeqForNumber(-1);
         }
-
+        
         [TestMethod]
         public void TestMethod2()
         {
@@ -24,5 +24,7 @@ namespace TestFareySeq
             Match match = regex.Match(sequence.getFareySeqForNumber(4));
             Assert.IsTrue(match.Success);
         }
+
+
     }
 }
