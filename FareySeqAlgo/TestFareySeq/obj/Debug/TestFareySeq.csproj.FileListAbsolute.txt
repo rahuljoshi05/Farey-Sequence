@@ -1,1 +1,5 @@
 D:\Code\Farey-Sequence\FareySeqAlgo\TestFareySeq\obj\Debug\TestFareySeq.csprojResolveAssemblyReference.cache
+D:\Code\Farey-Sequence\FareySeqAlgo\TestFareySeq\bin\Debug\TestFareySeq.dll
+D:\Code\Farey-Sequence\FareySeqAlgo\TestFareySeq\bin\Debug\TestFareySeq.pdb
+D:\Code\Farey-Sequence\FareySeqAlgo\TestFareySeq\obj\Debug\TestFareySeq.dll
+D:\Code\Farey-Sequence\FareySeqAlgo\TestFareySeq\obj\Debug\TestFareySeq.pdb
